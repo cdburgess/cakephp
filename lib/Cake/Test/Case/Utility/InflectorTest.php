@@ -7,21 +7,20 @@
  * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
- * Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The Open Group Test Suite License
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
  * @link          http://book.cakephp.org/2.0/en/development/testing.html
  * @package       Cake.Test.Case.Utility
  * @since         CakePHP(tm) v 1.2.0.4206
- * @license       Open Group Test Suite License (http://www.opensource.org/licenses/opengroup.php)
+ * @license       http://www.opensource.org/licenses/opengroup.php Open Group Test Suite License
  */
 
 /**
  * Included libraries.
- *
  */
 App::uses('Inflector', 'Utility');
 
@@ -109,6 +108,7 @@ class InflectorTest extends CakeTestCase {
 		$this->assertEquals(Inflector::singularize('roofs'), 'roof');
 		$this->assertEquals(Inflector::singularize('foes'), 'foe');
 		$this->assertEquals(Inflector::singularize('databases'), 'database');
+		$this->assertEquals(Inflector::singularize('cookies'), 'cookie');
 
 		$this->assertEquals(Inflector::singularize(''), '');
 	}
@@ -160,6 +160,7 @@ class InflectorTest extends CakeTestCase {
 		$this->assertEquals(Inflector::pluralize('cafe'), 'cafes');
 		$this->assertEquals(Inflector::pluralize('roof'), 'roofs');
 		$this->assertEquals(Inflector::pluralize('foe'), 'foes');
+		$this->assertEquals(Inflector::pluralize('cookie'), 'cookies');
 		$this->assertEquals(Inflector::pluralize(''), '');
 	}
 
